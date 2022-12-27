@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: rgb(117, 117, 117);
+    font-family: Verdana;
+}
+
+/*шапка сайта*/
+header {
+    width: 100%;
+    height: 10%;
+    padding: 10px 0.5% 0px 0.5%;
+    background: transparent;
+    float: left;
+    position: fixed;
+    font-family: Verdana;
+}
+
+header #logo img {
+    line-height: 200px;
+    margin-left: 10px;
+}
+
+@media (min-width: 701px) {
+    #logo img {
+        float: left;
+        width: 300px;
+        height: 200px;
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 700px) {
+    #logo img {
+        margin-top: 300px;
+        width: 120px;
+        height: 60px;
+    }
+}
+
+nav {
+    display: table;
+    margin: 10 auto;
+  }
+  nav ul {
+    list-style: none;
+    margin: 10;
+    padding: 5;
+  }
+  .topmenu{
+    content: "";
+    display: table;
+    clear: both;
+    margin-top:5%;
+  }
+  .topmenu > li {
+    width: 25%;
+    float: left;
+    position: relative;
+  }
+  .topmenu > li > a {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 40px 60px;
+  }
+  .topmenu li a:hover { color: #D5B45B; }
+  .submenu-link:after {
+    content: "\00B7";
+    color: inherit;
+    margin-top: auto;
+  }
+  .submenu {
+    background: #cfcfcf;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 5;
+  width: 180px;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: .5s ease-in-out;
+  }
+  .submenu a {
+    color: rgb(53, 53, 53);
+    text-align: top;
+    padding: 12px 15px;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(209, 209, 209, 0.1);
+  }
+  .submenu li:last-child a { border-bottom: none; }
+  .topmenu > li:hover .submenu {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  @media (max-width: 600px) {
+    .topmenu li {
+        margin-left: 0;
+        margin-top: 2%;
+    }
+}
+
+/*Стили для фиксированной фапки*/
+.fixed {
+    z-index: 5000;
+    height: auto;
+    background-color: #fff;
+    border-bottom: 1px solid silver;
+}
+
+header.fixed #logo {
+    color: #343434;
+}
+
+.fixed .topmenu li a {
+    color: #343434
+}
+
+.fixed .topmenu li a:hover {
+    color: #7c7c7c
+}
+
+/*Главный блок на сайте*/
+#top {
+    width: 100%;
+    background-image: url(https://kartinkin.net/uploads/posts/2022-12/1670472102_5-kartinkin-net-p-seminar-kartinka-oboi-6.jpg);
+    background-blend-mode: multiply;
+    background-color: #2e3a44;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+@media (min-width: 1001px) {
+    #top {
+        font-size: 2em;
+        height: 700px;
+    }
+}
+
+@media (max-width: 1000px) and (min-width:651px) {
+    #top {
+        font-size: 2em;
+        height: auto;
+    }
+}
+
+@media(max-width:650px) {
+    #top {
+        font-size: 1.5em;
+        padding-top: 5%;
+        height: auto;
+    }
+}
+
+#top h1 {
+    font-size: 2em;
+    padding-top: 30%;
+}
+
+#top h3 {
+    color: #ccc;
+}
+
+/*Блок с возможностями*/
+#main {
+    float: left;
+    background-color: #f6f6f6;
+    border-top: 2px solid Silver;
+    color: #484848;
+    font-size: 1.2em;
+}
+
+@media (min-width: 1001px) {
+    #main {
+        padding: 100px 20%;
+        width: 60%;
+    }
+}
+
+@media (max-width: 1000px) {
+    #main {
+        padding: 100px 10%;
+        width: 600%;
+    }
+}
+
+@media (max-width: 700px) {
+    #main {
+        width: 90% !important;
+        margin-bottom: 20px;
+    }
+}
+
+#main div {
+    width: 50%;
+    margin-right: 20%;
+    float: float;
+}
+
+#main h2 {
+    font-size: 3em;
+    width: 200%;
+}
+
+#main span {
+    font-size: 2em;
+    width: 700%;
+    color: #a0a0a0
+    
+}
+
+
+/*Блок с преимуществами*/
+#overview {
+    float: left;
+    background-image: url(https://ninebot.ru/images/service-center/service_013.jpg);
+    background-blend-mode: multiply;
+    background-color: #ccc;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+#overview h2 {
+    font-size: 2em
+}
+
+#overview h4 {
+    color: #a0a0a0;
+    font-size: 1.5em
+}
+
+#overview .img {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    margin-top: 50px;
+}
+
+#overview .img:nth-child(odd) {
+    margin-left: 20%;
+}
+
+#overview img {
+    background: #fafafa;
+    padding: 5px;
+    border: 2px solid rgb(149, 216, 255);
+    width: 100%;
+    max-width: 500px;
+}
+
+#overview span {
+    float: left;
+    width: 100%;
+    font-size: 2em;
+    margin: top 10px;
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    #overview .img {
+        width: 80% !important;
+        margin-right: 0 !important;
+        margin-left: 10% !important;
+    }
+}
+
+/*Вопросы и ответы*/
+#faq {
+    background-color: #fff;
+    border-top: 2px dashed #7c7c7c;
+    width: 100%;
+    float: left;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+@media (min-width:801px) {
+    #faq div {
+        width: 25%;
+        margin-left: 6%;
+        float: left;
+    }
+}
+
+@media (max-width: 800px) {
+    #faq div {
+        width: 80%;
+        margin-left: 10%;
+        float: left;
+    }
+}
+
+#faq .title {
+    font-weight: lighter;
+    color: #a3a0ad;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+#faq .heading {
+    color: #a270ff;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#faq p {
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #4a4a4a;
+    font-size: 0.95em;
+    margin-bottom: 40px;
+}
+
+
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  a {
+    color: #428bca;
+    text-decoration: none;
+  }
+  a:hover,
+  a:focus {
+    color: #2a6496;
+    text-decoration: underline;
+  }
+  a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+  figure {
+    margin: 0;
+  }
+  img {
+    vertical-align: middle;
+  }
+  .img-responsive,
+  .thumbnail > img,
+  .thumbnail a > img,
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .img-rounded {
+    border-radius: 6px;
+  }
+  .img-thumbnail {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+  }
+  .img-circle {
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  
+  .row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  element.style {
+    display: block;
+}
+
+  .materials-item {
+    padding: 0 15px;
+    margin: 0 0 26px 0;
+    position: relative;
+    min-height: 60px;
+}
+  
+  .materials-list .material-name {
+    display: block;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: bold;
+    font-family: 'PT Sans';
+    clear: left;
+    margin: 0 0 4px 0;
+}
+
+.materials-list .material-short {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #3d3d3d;
+}
+
+.materials-item .pic img {
+    width: 120px;
+    height: 120px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}

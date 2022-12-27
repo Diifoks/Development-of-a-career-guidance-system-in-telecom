@@ -1,0 +1,12 @@
+
+body{
+	background: #7ebaff;
+}
+.services-item-filled__photo-wrapper img{
+    width: 30%;
+    margin-right: 5%;
+    margin-top: 50px;
+}
+.filled_available{
+	background-color: rgb(184, 184, 184);
+}
